@@ -28,7 +28,7 @@ class TabBarControllerSettings {
     static func createRecommendationViewController() -> UIViewController {
         
         let recommnd = RecommendationViewController()
-        let recommndIcon = UITabBarItem(title: "Recommendation", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        let recommndIcon = UITabBarItem(title: "Recommendation", image: UIImage(systemName: "list.bullet.rectangle.fill"), selectedImage: UIImage(systemName: "list.bullet.rectangle.fill"))
         recommnd.tabBarItem = recommndIcon
         return recommnd
     }
@@ -36,7 +36,7 @@ class TabBarControllerSettings {
     static func createSettingsViewController() -> UIViewController {
         
         let settings = SettingsViewController()
-        let settingsIcon = UITabBarItem(title: "Settings", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        let settingsIcon = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape.circle.fill"), selectedImage: UIImage(systemName: "gearshape.circle.fill"))
         settings.tabBarItem = settingsIcon
         return settings
     }

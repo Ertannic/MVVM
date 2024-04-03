@@ -12,12 +12,15 @@
 		524B49232BBADE7D009DC176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524B49222BBADE7D009DC176 /* Assets.xcassets */; };
 		524B49372BBAFD7D009DC176 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 524B49362BBAFD7D009DC176 /* SnapKit */; };
 		524B49392BBAFD7D009DC176 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 524B49382BBAFD7D009DC176 /* SnapKit-Dynamic */; };
-		524B49452BBC59B7009DC176 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49442BBC59B7009DC176 /* TabBarController.swift */; };
-		524B49472BBC5C1E009DC176 /* TabBarControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49462BBC5C1E009DC176 /* TabBarControllerSettings.swift */; };
 		524B494B2BBC5D7E009DC176 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494A2BBC5D7E009DC176 /* MainViewController.swift */; };
 		524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */; };
 		524B494F2BBC5E80009DC176 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */; };
 		524B49512BBC5E92009DC176 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49502BBC5E92009DC176 /* SettingsViewController.swift */; };
+		524B49552BBC6DAE009DC176 /* LabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49542BBC6DAE009DC176 /* LabelViewModel.swift */; };
+		524B49572BBDBC9B009DC176 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49562BBDBC9B009DC176 /* TabBarItem.swift */; };
+		524B49592BBDBCE7009DC176 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49582BBDBCE7009DC176 /* TabBarViewModel.swift */; };
+		524B495B2BBDBD07009DC176 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B495A2BBDBD07009DC176 /* CustomTabBarController.swift */; };
+		524B495D2BBDC6BE009DC176 /* LabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B495C2BBDC6BE009DC176 /* LabelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +29,15 @@
 		524B491B2BBADE7B009DC176 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		524B49222BBADE7D009DC176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524B49272BBADE7D009DC176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = MVVM/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
-		524B49442BBC59B7009DC176 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		524B49462BBC5C1E009DC176 /* TabBarControllerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerSettings.swift; sourceTree = "<group>"; };
 		524B494A2BBC5D7E009DC176 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		524B49502BBC5E92009DC176 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		524B49542BBC6DAE009DC176 /* LabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewModel.swift; sourceTree = "<group>"; };
+		524B49562BBDBC9B009DC176 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		524B49582BBDBCE7009DC176 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		524B495A2BBDBD07009DC176 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		524B495C2BBDC6BE009DC176 /* LabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 		524B492F2BBAF8FB009DC176 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				524B49442BBC59B7009DC176 /* TabBarController.swift */,
+				524B495A2BBDBD07009DC176 /* CustomTabBarController.swift */,
 				524B494A2BBC5D7E009DC176 /* MainViewController.swift */,
 				524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */,
 				524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */,
@@ -108,7 +114,8 @@
 		524B49302BBAF902009DC176 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				524B49462BBC5C1E009DC176 /* TabBarControllerSettings.swift */,
+				524B49542BBC6DAE009DC176 /* LabelViewModel.swift */,
+				524B49582BBDBCE7009DC176 /* TabBarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -116,6 +123,8 @@
 		524B493E2BBB022E009DC176 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				524B49562BBDBC9B009DC176 /* TabBarItem.swift */,
+				524B495C2BBDC6BE009DC176 /* LabelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,12 +207,15 @@
 			files = (
 				524B494F2BBC5E80009DC176 /* RecommendationViewController.swift in Sources */,
 				524B494B2BBC5D7E009DC176 /* MainViewController.swift in Sources */,
-				524B49452BBC59B7009DC176 /* TabBarController.swift in Sources */,
-				524B49472BBC5C1E009DC176 /* TabBarControllerSettings.swift in Sources */,
+				524B49592BBDBCE7009DC176 /* TabBarViewModel.swift in Sources */,
+				524B49572BBDBC9B009DC176 /* TabBarItem.swift in Sources */,
 				524B49512BBC5E92009DC176 /* SettingsViewController.swift in Sources */,
 				524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */,
 				524B491A2BBADE7B009DC176 /* AppDelegate.swift in Sources */,
+				524B495D2BBDC6BE009DC176 /* LabelModel.swift in Sources */,
+				524B495B2BBDBD07009DC176 /* CustomTabBarController.swift in Sources */,
 				524B491C2BBADE7B009DC176 /* SceneDelegate.swift in Sources */,
+				524B49552BBC6DAE009DC176 /* LabelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

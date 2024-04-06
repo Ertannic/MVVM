@@ -15,7 +15,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Outlets
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: view.bounds, style: .insetGrouped)
+        let tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,27 +46,26 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.settingsItems.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.settingsItems[section].count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-
+        
         let item = viewModel.settingsItems[indexPath.section][indexPath.row]
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.value
-
+        
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-               return "Главные Настройки"
-           } else if section == 1 {
-               return "Второстепенные Настройки"
-           }
-           return nil
+            return "Главные Настройки"
+        } else {
+            return "Второстепенные Настройки"
+        }
     }
 }

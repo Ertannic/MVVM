@@ -23,6 +23,8 @@
 		524B495D2BBDC6BE009DC176 /* LabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B495C2BBDC6BE009DC176 /* LabelModel.swift */; };
 		524B49612BBDD10A009DC176 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49602BBDD109009DC176 /* SettingsItem.swift */; };
 		524B49632BBDD120009DC176 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49622BBDD120009DC176 /* SettingsViewModel.swift */; };
+		524B49652BC14DDB009DC176 /* PurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49642BC14DDB009DC176 /* PurchaseModel.swift */; };
+		524B49672BC14E09009DC176 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49662BC14E09009DC176 /* PurchaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		524B495C2BBDC6BE009DC176 /* LabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelModel.swift; sourceTree = "<group>"; };
 		524B49602BBDD109009DC176 /* SettingsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
 		524B49622BBDD120009DC176 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		524B49642BC14DDB009DC176 /* PurchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseModel.swift; sourceTree = "<group>"; };
+		524B49662BC14E09009DC176 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 				524B49542BBC6DAE009DC176 /* LabelViewModel.swift */,
 				524B49582BBDBCE7009DC176 /* TabBarViewModel.swift */,
 				524B49622BBDD120009DC176 /* SettingsViewModel.swift */,
+				524B49662BC14E09009DC176 /* PurchaseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				524B49562BBDBC9B009DC176 /* TabBarItem.swift */,
 				524B495C2BBDC6BE009DC176 /* LabelModel.swift */,
 				524B49602BBDD109009DC176 /* SettingsItem.swift */,
+				524B49642BC14DDB009DC176 /* PurchaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 				524B49572BBDBC9B009DC176 /* TabBarItem.swift in Sources */,
 				524B49512BBC5E92009DC176 /* SettingsViewController.swift in Sources */,
 				524B49612BBDD10A009DC176 /* SettingsItem.swift in Sources */,
+				524B49652BC14DDB009DC176 /* PurchaseModel.swift in Sources */,
+				524B49672BC14E09009DC176 /* PurchaseViewModel.swift in Sources */,
 				524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */,
 				524B491A2BBADE7B009DC176 /* AppDelegate.swift in Sources */,
 				524B49632BBDD120009DC176 /* SettingsViewModel.swift in Sources */,

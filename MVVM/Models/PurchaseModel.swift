@@ -10,5 +10,4 @@ import Foundation
 struct Purchase {
     let description: String
     let amount: Int
-    let date: Date
 }

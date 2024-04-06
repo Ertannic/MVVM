@@ -11,7 +11,7 @@ class PurchaseViewModel {
     var purchase: [Purchase] = []
 
         func addPurchase(description: String, amount: Int) {
-        let newPurchase = Purchase(description: description, amount: amount, date: Date())
+        let newPurchase = Purchase(description: description, amount: amount)
         purchase.append(newPurchase)
     }
 }

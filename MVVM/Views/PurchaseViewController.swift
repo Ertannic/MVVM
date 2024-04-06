@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class PurchaseViewController: UIViewController {
     
@@ -41,36 +42,37 @@ class PurchaseViewController: UIViewController {
         }
     }
     private func setupAddExpenseButton() {
-            let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addExpense))
-            navigationItem.rightBarButtonItem = addButton
-        }
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addExpense))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
     
     @objc private func addExpense() {
-            let alertController = UIAlertController(title: "Добавить покупку", message: nil, preferredStyle: .alert)
-
-            alertController.addTextField { textField in
-                textField.placeholder = "Название"
-            }
-
-            alertController.addTextField { textField in
-                textField.placeholder = "Сумма"
-                textField.keyboardType = .decimalPad
-            }
-
-            let addAction = UIAlertAction(title: "Добавить", style: .default) { [weak self, weak alertController] _ in
-                guard let fields = alertController?.textFields, let description = fields[0].text, let amountString = fields[1].text, let amount = Int(amountString) else {
-                    return
-                }
-                self?.viewModel.addPurchase(description: description, amount: amount)
-                self?.tableView.reloadData()
-            }
-
-            alertController.addAction(addAction)
-            alertController.addAction(UIAlertAction(title: "Назад", style: .cancel, handler: nil))
-
-            present(alertController, animated: true)
+        let alertController = UIAlertController(title: "Добавить покупку", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Название"
         }
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Сумма"
+            textField.keyboardType = .decimalPad
+        }
+        
+        let addAction = UIAlertAction(title: "Добавить", style: .default) { [weak self, weak alertController] _ in
+            guard let fields = alertController?.textFields, let description = fields[0].text, let amountString = fields[1].text, let amount = Int(amountString) else {
+                return
+            }
+            self?.viewModel.addPurchase(description: description, amount: amount)
+            self?.tableView.reloadData()
+        }
+        
+        alertController.addAction(addAction)
+        alertController.addAction(UIAlertAction(title: "Назад", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true)
     }
+}
 
 extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,8 +92,9 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Все покупки "
+            return "Все покупки"
         } else {
             return nil
         }
+    }
 }

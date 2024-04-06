@@ -87,4 +87,11 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = "\(purchase.description) - \(purchase.amount) kzt"
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Все покупки "
+        } else {
+            return nil
+        }
 }

@@ -25,6 +25,7 @@
 		524B49632BBDD120009DC176 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49622BBDD120009DC176 /* SettingsViewModel.swift */; };
 		524B49652BC14DDB009DC176 /* PurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49642BC14DDB009DC176 /* PurchaseModel.swift */; };
 		524B49672BC14E09009DC176 /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49662BC14E09009DC176 /* PurchaseViewModel.swift */; };
+		524B496B2BC2700E009DC176 /* InfoDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B496A2BC2700E009DC176 /* InfoDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		524B49622BBDD120009DC176 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		524B49642BC14DDB009DC176 /* PurchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseModel.swift; sourceTree = "<group>"; };
 		524B49662BC14E09009DC176 /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
+		524B496A2BC2700E009DC176 /* InfoDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */,
 				524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */,
 				524B49502BBC5E92009DC176 /* SettingsViewController.swift */,
+				524B496A2BC2700E009DC176 /* InfoDisplayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				524B49512BBC5E92009DC176 /* SettingsViewController.swift in Sources */,
 				524B49612BBDD10A009DC176 /* SettingsItem.swift in Sources */,
 				524B49652BC14DDB009DC176 /* PurchaseModel.swift in Sources */,
+				524B496B2BC2700E009DC176 /* InfoDisplayView.swift in Sources */,
 				524B49672BC14E09009DC176 /* PurchaseViewModel.swift in Sources */,
 				524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */,
 				524B491A2BBADE7B009DC176 /* AppDelegate.swift in Sources */,

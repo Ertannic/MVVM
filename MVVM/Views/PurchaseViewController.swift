@@ -10,8 +10,9 @@ import SnapKit
 
 class PurchaseViewController: UIViewController {
     
-    let viewModel = PurchaseViewModel()
+    var viewModel = PurchaseViewModel()
     
+    // MARK: - UI
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -21,18 +22,18 @@ class PurchaseViewController: UIViewController {
         return tableView
     }()
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Покупки на сегодня"
         setupViews()
         setupConstraints()
         setupAddExpenseButton()
-        
     }
     
-    
+    // MARK: - Setups
     private func setupViews() {
+        view.backgroundColor = .systemBackground
         view.addSubview(tableView)
     }
     
@@ -41,11 +42,11 @@ class PurchaseViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
+    
     private func setupAddExpenseButton() {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addExpense))
         navigationItem.rightBarButtonItem = addButton
     }
-    
     
     @objc private func addExpense() {
         let alertController = UIAlertController(title: "Добавить покупку", message: nil, preferredStyle: .alert)
@@ -74,6 +75,7 @@ class PurchaseViewController: UIViewController {
     }
 }
 
+// MARK: - Extension
 extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -98,3 +100,4 @@ extension PurchaseViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+

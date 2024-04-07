@@ -11,7 +11,6 @@ struct LabelModel {
     let text: String
 }
 
-// Создайте структуру, представляющую данные для пяти меток.
 struct LabelsData {
     let labels: [LabelModel]
 }

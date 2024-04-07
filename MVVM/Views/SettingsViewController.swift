@@ -12,8 +12,7 @@ class SettingsViewController: UIViewController {
     
     var viewModel = SettingsViewModel()
     
-    // MARK: - Outlets
-    
+    // MARK: - UI
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -22,15 +21,16 @@ class SettingsViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SettingsCell")
         return tableView
     }()
-
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Настройки"
         setupViews()
         setupConstraints()
     }
     
+    // MARK: - Setups
     private func setupViews() {
         view.addSubview(tableView)
     }
@@ -42,6 +42,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
+// MARK: - Extension
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.settingsItems.count
@@ -53,11 +54,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-        
         let item = viewModel.settingsItems[indexPath.section][indexPath.row]
         cell.textLabel?.text = item.title
         cell.detailTextLabel?.text = item.value
-        
         return cell
     }
     

@@ -9,9 +9,14 @@ import Foundation
 
 class PurchaseViewModel {
     var purchase: [Purchase] = []
-
-        func addPurchase(description: String, amount: Int) {
+    var totalBalance: Int = 1000
+    var totalExpenses: Int = 0
+    
+    func addPurchase(description: String, amount: Int) {
         let newPurchase = Purchase(description: description, amount: amount)
         purchase.append(newPurchase)
+        totalBalance -= amount
+        totalExpenses += amount
     }
 }
+

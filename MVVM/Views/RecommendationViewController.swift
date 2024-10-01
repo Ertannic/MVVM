@@ -4,61 +4,57 @@
 //
 //  Created by Ertannic Saralay on 02.04.2024.
 //
-
 import UIKit
+import SnapKit
 
 class RecommendationViewController: UIViewController {
-
+    
+    let viewModel = LabelsViewModel()
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
+        title = "Рекомендации"
+        setupView()
         setupLabels()
     }
     
-    private func configureNavigationBar() {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = UIColor.systemBackground
-            navigationController?.navigationBar.prefersLargeTitles = true
-            navigationController?.navigationBar.isHidden = false
-            title = "Рекомендации"
+    // MARK: - Setups
+    func setupView() {
+        view.backgroundColor = .systemBackground
+    }
+    func setupLabels() {
+        let containerView = UIView()
+        view.addSubview(containerView)
+        containerView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
         }
-
-    var viewModel = RecommendationViewModel()
-
-    // MARK: - UI creation
-    private func createLabel(with text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.textAlignment = .center
-        label.textColor = .white
-        return label
+        
+        var previousLabel: UILabel?
+        for labelModel in viewModel.labels { 
+            let label = UILabel()
+            label.text = labelModel.text
+            label.font = UIFont.boldSystemFont(ofSize: 24)
+            label.numberOfLines = 0
+            containerView.addSubview(label)
+            label.snp.makeConstraints { make in
+                make.leading.equalTo(containerView.snp.leading).offset(15)
+                make.trailing.equalTo(containerView.snp.trailing).offset(-15)
+                if let previous = previousLabel {
+                    make.top.equalTo(previous.snp.bottom).offset(20)
+                } else {
+                    make.top.equalToSuperview()
+                }
+            }
+            previousLabel = label
+        }
+        
+        previousLabel?.snp.makeConstraints { make in
+            make.bottom.lessThanOrEqualToSuperview()
+        }
     }
-
-    // MARK: - Setup
-    private func setupLabels() {
-        let firstLabel = createLabel(with: viewModel.loadData.firstLabel)
-        let secondLabel = createLabel(with: viewModel.loadData.secondLabel)
-        let thirdLabel = createLabel(with: viewModel.loadData.thirdLabel)
-        let fourthLabel = createLabel(with: viewModel.loadData.fourthLabel)
-        let fifthLabel = createLabel(with: viewModel.loadData.fifthLabel)
-
-        let stackView = UIStackView(arrangedSubviews: [firstLabel, secondLabel, thirdLabel, fourthLabel, fifthLabel])
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
-
-        NSLayoutConstraint.activate([
-                    stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                    stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                    stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
-                    stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20)
-                ])
-    }
-    //MARK: SetupHierarchy
-    private func setupLayout() {
-        //snapkit layout
-    }
-
 }
+
+

@@ -11,19 +11,54 @@ class RecommendationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureNavigationBar()
+        setupLabels()
     }
     
+    private func configureNavigationBar() {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColor.systemBackground
+            navigationController?.navigationBar.prefersLargeTitles = true
+            navigationController?.navigationBar.isHidden = false
+            title = "Рекомендации"
+        }
 
-    /*
-    // MARK: - Navigation
+    var viewModel = RecommendationViewModel()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - UI creation
+    private func createLabel(with text: String) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.textAlignment = .center
+        label.textColor = .white
+        return label
     }
-    */
+
+    // MARK: - Setup
+    private func setupLabels() {
+        let firstLabel = createLabel(with: viewModel.loadData.firstLabel)
+        let secondLabel = createLabel(with: viewModel.loadData.secondLabel)
+        let thirdLabel = createLabel(with: viewModel.loadData.thirdLabel)
+        let fourthLabel = createLabel(with: viewModel.loadData.fourthLabel)
+        let fifthLabel = createLabel(with: viewModel.loadData.fifthLabel)
+
+        let stackView = UIStackView(arrangedSubviews: [firstLabel, secondLabel, thirdLabel, fourthLabel, fifthLabel])
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+
+        NSLayoutConstraint.activate([
+                    stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                    stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                    stackView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
+                    stackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20)
+                ])
+    }
+    //MARK: SetupHierarchy
+    private func setupLayout() {
+        //snapkit layout
+    }
 
 }

@@ -10,14 +10,14 @@
 		524B491A2BBADE7B009DC176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49192BBADE7B009DC176 /* AppDelegate.swift */; };
 		524B491C2BBADE7B009DC176 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B491B2BBADE7B009DC176 /* SceneDelegate.swift */; };
 		524B49232BBADE7D009DC176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524B49222BBADE7D009DC176 /* Assets.xcassets */; };
-		524B49372BBAFD7D009DC176 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 524B49362BBAFD7D009DC176 /* SnapKit */; };
-		524B49392BBAFD7D009DC176 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 524B49382BBAFD7D009DC176 /* SnapKit-Dynamic */; };
 		524B49452BBC59B7009DC176 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49442BBC59B7009DC176 /* TabBarController.swift */; };
 		524B49472BBC5C1E009DC176 /* TabBarControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49462BBC5C1E009DC176 /* TabBarControllerSettings.swift */; };
 		524B494B2BBC5D7E009DC176 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494A2BBC5D7E009DC176 /* MainViewController.swift */; };
 		524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */; };
 		524B494F2BBC5E80009DC176 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */; };
 		524B49512BBC5E92009DC176 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49502BBC5E92009DC176 /* SettingsViewController.swift */; };
+		524B49532BBC6CA7009DC176 /* RecommendatoinLabelData .swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49522BBC6CA7009DC176 /* RecommendatoinLabelData .swift */; };
+		524B49552BBC6DAE009DC176 /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524B49542BBC6DAE009DC176 /* RecommendationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +32,8 @@
 		524B494C2BBC5DE2009DC176 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		524B494E2BBC5E80009DC176 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
 		524B49502BBC5E92009DC176 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		524B49522BBC6CA7009DC176 /* RecommendatoinLabelData .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecommendatoinLabelData .swift"; sourceTree = "<group>"; };
+		524B49542BBC6DAE009DC176 /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524B49372BBAFD7D009DC176 /* SnapKit in Frameworks */,
-				524B49392BBAFD7D009DC176 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				524B49462BBC5C1E009DC176 /* TabBarControllerSettings.swift */,
+				524B49542BBC6DAE009DC176 /* RecommendationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -116,6 +117,7 @@
 		524B493E2BBB022E009DC176 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				524B49522BBC6CA7009DC176 /* RecommendatoinLabelData .swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,8 +139,6 @@
 			);
 			name = MVVM;
 			packageProductDependencies = (
-				524B49362BBAFD7D009DC176 /* SnapKit */,
-				524B49382BBAFD7D009DC176 /* SnapKit-Dynamic */,
 			);
 			productName = MVVM;
 			productReference = 524B49162BBADE7B009DC176 /* MVVM.app */;
@@ -169,7 +169,7 @@
 			);
 			mainGroup = 524B490D2BBADE7B009DC176;
 			packageReferences = (
-				524B49352BBAFD7D009DC176 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8AD6B32B2BBD6D5D00424B6D /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 524B49172BBADE7B009DC176 /* Products */;
 			projectDirPath = "";
@@ -197,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				524B494F2BBC5E80009DC176 /* RecommendationViewController.swift in Sources */,
+				524B49532BBC6CA7009DC176 /* RecommendatoinLabelData .swift in Sources */,
 				524B494B2BBC5D7E009DC176 /* MainViewController.swift in Sources */,
 				524B49452BBC59B7009DC176 /* TabBarController.swift in Sources */,
 				524B49472BBC5C1E009DC176 /* TabBarControllerSettings.swift in Sources */,
@@ -204,6 +205,7 @@
 				524B494D2BBC5DE2009DC176 /* PurchaseViewController.swift in Sources */,
 				524B491A2BBADE7B009DC176 /* AppDelegate.swift in Sources */,
 				524B491C2BBADE7B009DC176 /* SceneDelegate.swift in Sources */,
+				524B49552BBC6DAE009DC176 /* RecommendationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +342,9 @@
 				INFOPLIST_FILE = MVVM/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,8 +369,9 @@
 				INFOPLIST_FILE = MVVM/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +409,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		524B49352BBAFD7D009DC176 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		8AD6B32B2BBD6D5D00424B6D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -414,19 +418,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		524B49362BBAFD7D009DC176 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 524B49352BBAFD7D009DC176 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		524B49382BBAFD7D009DC176 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 524B49352BBAFD7D009DC176 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 524B490E2BBADE7B009DC176 /* Project object */;
 }

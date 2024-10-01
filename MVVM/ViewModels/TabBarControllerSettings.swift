@@ -12,9 +12,10 @@ class TabBarControllerSettings {
     static func createMainViewController() -> UIViewController {
         
         let main = MainViewController()
+        let navController = UINavigationController(rootViewController: main)
         let mainIcon = UITabBarItem(title: "Main", image: UIImage(systemName: "mail.fill"), selectedImage: UIImage(systemName: "mail.fill"))
         main.tabBarItem = mainIcon
-        return main
+        return navController
     }
     
     static func createPurchaseViewController() -> UIViewController {
@@ -28,9 +29,10 @@ class TabBarControllerSettings {
     static func createRecommendationViewController() -> UIViewController {
         
         let recommnd = RecommendationViewController()
+        let navController = UINavigationController(rootViewController: recommnd)
         let recommndIcon = UITabBarItem(title: "Recommendation", image: UIImage(systemName: "list.bullet.rectangle.fill"), selectedImage: UIImage(systemName: "list.bullet.rectangle.fill"))
         recommnd.tabBarItem = recommndIcon
-        return recommnd
+        return navController
     }
     
     static func createSettingsViewController() -> UIViewController {
